@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "madel.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/madel.py"
+    }
+  ]
+}
