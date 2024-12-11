@@ -119,9 +119,14 @@ def get_evaluations():
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello, Vercel!"}
+    return {"message": "Hello, guys!"}
 
 
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", 8000))  # Use 8000 if $PORT is not set
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
 
 
 # Run the application
