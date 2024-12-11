@@ -117,6 +117,10 @@ def get_evaluations():
     evaluations = read_json(EVALUATIONS_FILE)
     return evaluations
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello, Vercel!"}
+
 
 
 
